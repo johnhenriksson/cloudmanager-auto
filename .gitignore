@@ -4,4 +4,5 @@ tf_deploy/OnCommandCloudManager-V3.9.17.sh
 tf_deploy/.terraform*
 tf_deploy/terraform.tfstate*
 
-*terraform*
+.terraform*
+terraform.tfstate*
