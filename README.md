@@ -1,5 +1,7 @@
 # NetApp Cloud Manager automated deployment on VMware with Packer & Terraform
 
+![Cloud Manager VM Screenshot](img/cloudmanager_vmware.png)
+
 ## pre-reqs
 
 * Terraform https://www.terraform.io/downloads
@@ -24,9 +26,10 @@ Packer requires a DHCP enabled network to build the VM template
 
 ## Create environment variables
 
-Rename the `.env_example` to `.env` and adjust the content to your environment. You need to add credentials and connection properties to your vCenter server.
+Rename the file `.env_example` to `.env` and adjust the content to your environment. You need to modify credentials and connection properties to your vCenter server.
 
 **Important**, the automation uses the default password of `server` and you !need! to change that after deployment to secure your environment.
+
 **Important**, Cloud Manager requires 4 vCPU, 16GB RAM & 100+GB storage(I recommend 250GB)
 
 ## Deploy!
@@ -37,9 +40,13 @@ Rename the `.env_example` to `.env` and adjust the content to your environment. 
 4. Load your environment variables with `export $(xargs < .env)`
 5. Build the VM template with `packer build centos.json` - (takes about ~15-20 min)
 ![Cloud Manager Packer screenshot](img/cloudmanager_packer.png)
-6. Move to the tf_deploy folder and run `terraform apply` to deploy Cloud Manager VM from the template
-7. After deployment, browse to http://{cloudmanager_ip} to finish the installation
+
+6. Move to the `tf_deploy` folder and run `terraform apply` to deploy Cloud Manager VM from the template
+![Cloud Manager Terraform screenshot](img/cloudmanager_terraform.png)
+
+7. SSH to the VM and change the root passwordh with `passwd`
+8. After deployment, browse to http://{cloudmanager_ip} to finish the installation
 
 Read more about Cloud Manager deployment on https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html
 
-**Important**, the automation uses the default password of `server` and you !need! to change that after deployment to secure your environment.
+**Important**, the automation uses the default password of `server` and you **need(!)** to change that after deployment to secure your environment.

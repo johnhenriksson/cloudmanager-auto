@@ -1,0 +1,7 @@
+.env
+Cloud-Manager-Connector-offline-v3.9.17
+tf_deploy/OnCommandCloudManager-V3.9.17.sh
+tf_deploy/.terraform*
+tf_deploy/terraform.tfstate*
+
+*terraform*
