@@ -44,7 +44,7 @@ Rename the file `.env_example` to `.env` and adjust the content to your environm
 6. Move to the `tf_deploy` folder and run `terraform apply` to deploy Cloud Manager VM from the template
 ![Cloud Manager Terraform screenshot](img/cloudmanager_terraform.png)
 
-7. SSH to the VM and change the root passwordh with `passwd`
+7. SSH to the VM and change the root passwordh with `passwd root`
 8. After deployment, browse to http://{cloudmanager_ip} to finish the installation
 
 Read more about Cloud Manager deployment on https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html
