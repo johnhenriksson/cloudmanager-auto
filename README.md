@@ -19,6 +19,8 @@ This installation is tested and validated with;
 * CentOS-7-x86_64-DVD-2009.iso
 * OnCommandCloudManager-V3.9.17
 
+I'm running the automation from my MacBook but should be the same for any *nix based OS.
+
 # Run the automation
 
 ## Create environment variables
