@@ -6,3 +6,5 @@ tf_deploy/terraform.tfstate*
 
 .terraform*
 terraform.tfstate*
+
+.DS_Store
