@@ -19,10 +19,6 @@ This installation is tested and validated with;
 * CentOS-7-x86_64-DVD-2009.iso
 * OnCommandCloudManager-V3.9.17
 
-# About the automation
-
-Packer requires a DHCP enabled network to build the VM template
-
 # Run the automation
 
 ## Create environment variables
@@ -32,6 +28,8 @@ Rename the file `.env_example` to `.env` and adjust the content to your environm
 **Important**, the automation uses the default password of `server` and you !need! to change that after deployment to secure your environment.
 
 **Important**, Cloud Manager requires 4 vCPU, 16GB RAM & 100+GB storage(I recommend 250GB)
+
+Packer requires a DHCP enabled network to build the VM template
 
 ## Deploy!
 
