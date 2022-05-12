@@ -1,4 +1,7 @@
 # NetApp Cloud Manager automated deployment on VMware with Packer & Terraform
+This automation builds a VM template on CentOS 7, deploys that template and installs **NetApp Cloud Manager** - all automated.
+
+In this scenario we use the on-premise *(with internet access)* version of **NetApp Cloud Manager**, but you could easily change it to the *dark-site* version, just change the installation binary.
 
 ![Cloud Manager VM Screenshot](img/cloudmanager_vmware.png)
 
@@ -17,8 +20,6 @@ This installation is tested and validated with;
 * OnCommandCloudManager-V3.9.17
 
 # About the automation
-
-This automation builds a VM template on CentOS 7, deploys that template and installs **NetApp Cloud Manager** - all automated.
 
 Packer requires a DHCP enabled network to build the VM template
 
