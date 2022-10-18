@@ -42,7 +42,7 @@ Packer requires a DHCP enabled network to build the VM template
 5. Build the VM template with `packer build centos.json` - (takes about ~15-20 min)
 ![Cloud Manager Packer screenshot](img/cloudmanager_packer.png)
 
-6. Move to the `tf_deploy` folder and run `terraform apply` to deploy Cloud Manager VM from the template
+6. Move to the `tf_deploy` folder and run `terraform apply` to deploy Cloud Manager VM from the template. You may need to run `terraform init` the first time to initialize the environment.
 ![Cloud Manager Terraform screenshot](img/cloudmanager_terraform.png)
 
 7. SSH to the VM and change the root passwordh with `passwd root`
